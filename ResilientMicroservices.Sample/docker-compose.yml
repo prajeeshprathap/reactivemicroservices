@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  customerservice:
+    image: ${DOCKER_REGISTRY}customersvc
+    build:
+      context: .
+      dockerfile: Customers.Web/Dockerfile
+
+  orderservice:
+    image: ${DOCKER_REGISTRY}ordersvc
+    build:
+      context: .
+      dockerfile: Orders.Web/Dockerfile

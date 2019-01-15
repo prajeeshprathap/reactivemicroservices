@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  kafkaserver:
+    image: "spotify/kafka:latest"
+    ports:
+      - 2181:2181
+      - 9092:9092
+    environment:
+      ADVERTISED_HOST: kafkaserver
+      ADVERTISED_PORT: 9092
+
+  customerMongoDb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27018
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  orderMongoDb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27019
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
