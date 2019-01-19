@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Comman.Contracts
+namespace Comman.Contracts.Events
 {
-    [Serializable]
-    public class Customer
+    [Event("CustomerCreated")]
+    public class CustomerCreatedEvent : IEvent
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

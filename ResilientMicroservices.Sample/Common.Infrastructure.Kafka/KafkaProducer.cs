@@ -1,6 +1,4 @@
-﻿using Command.Contracts.Events;
-using Common.Contracts;
-using Common.Domain;
+﻿using Common.Domain;
 using Confluent.Kafka;
 using Confluent.Kafka.Serialization;
 using Microsoft.Extensions.Options;
@@ -10,6 +8,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Comman.Contracts;
+using Comman.Contracts.Events;
 
 namespace Common.Infrastructure.Kafka
 {
@@ -56,13 +56,13 @@ namespace Common.Infrastructure.Kafka
 
         private string GetMessage(IEvent @event)
         {
-            var attributes = @event.GetType().GetCustomAttribute<EventAttribute>();
-            if (attributes == null)
+            var attribute = @event.GetType().GetCustomAttribute<EventAttribute>();
+            if (attribute == null)
             {
                 throw new ArgumentException($"{nameof(EventAttribute)} missing on {nameof(@event)}");
             }
 
-            if (string.IsNullOrEmpty(attributes.Name))
+            if (string.IsNullOrEmpty(attribute.Name))
             {
                 throw new ArgumentNullException(
                     $"{nameof(EventAttribute)}.Name missing on {nameof(@event)}");
@@ -70,7 +70,7 @@ namespace Common.Infrastructure.Kafka
 
             var message = new KMessage
             {
-                Name = attributes.Name,
+                Name = attribute.Name,
                 EventData = JsonConvert.SerializeObject(@event, Options.SerializerSettings)
             };
 

@@ -1,19 +1,13 @@
 ﻿using System;
 
-namespace Comman.Contracts
+namespace Comman.Contracts.Events
 {
-    public class Order
+    [Event("OrderCreated")]
+    public class OrderCreatedEvent : IEvent
     {
         public Guid Id { get; set; }
         public Guid CustomerId { get; set; }
         public decimal Amount { get; set; }
         public OrderStatus Status { get; set; }
-    }
-
-    public enum OrderStatus
-    {
-        Created,
-        Shipped,
-        Cancelled
     }
 }

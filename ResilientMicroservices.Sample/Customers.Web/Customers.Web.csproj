@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Command.Contracts\Command.Contracts.csproj" />
+    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
     <ProjectReference Include="..\Common.Infrastructure.Kafka\Common.Infrastructure.Kafka.csproj" />
     <ProjectReference Include="..\Customers.Domain\Customers.Domain.csproj" />
   </ItemGroup>

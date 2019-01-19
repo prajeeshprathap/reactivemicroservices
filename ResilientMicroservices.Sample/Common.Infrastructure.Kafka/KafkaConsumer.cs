@@ -1,5 +1,4 @@
-﻿using Common.Contracts;
-using Common.Domain;
+﻿using Common.Domain;
 using Confluent.Kafka;
 using Confluent.Kafka.Serialization;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Comman.Contracts;
 
 namespace Common.Infrastructure.Kafka
 {

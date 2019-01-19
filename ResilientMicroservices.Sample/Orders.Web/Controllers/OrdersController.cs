@@ -1,5 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using AutoMapper;
+using Comman.Contracts;
+using Common.Domain;
 using Microsoft.AspNetCore.Mvc;
+using ResilientMicroservices.Sample.Orders.Domain.Commands;
 
 namespace ResilientMicroservices.Sample.Orders.Web.Controllers
 {
@@ -7,36 +13,30 @@ namespace ResilientMicroservices.Sample.Orders.Web.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly ILog _log;
+        private readonly IMapper _mapper;
+        private readonly ICommandHandler<CreateOrderCommand> _commandHandler;
+
+        public OrdersController(ILog log, IMapper mapper,
+            ICommandHandler<CreateOrderCommand> commandHandler)
         {
-            return new string[] { "value1", "value2" };
+            _log = log;
+            _mapper = mapper;
+            _commandHandler = commandHandler;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Route("[action]")]
+        public async Task<IActionResult> NewOrder([FromBody] Order order)
         {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            if (order == default(Order))
+            {
+                return BadRequest("Body empty or null");
+            }
+            _log.Info("Received Order data:", order);
+            var command = _mapper.Map<CreateOrderCommand>(order);
+            await _commandHandler.Handle(command, CancellationToken.None);
+            return Ok();
         }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Command.Contracts.Events;
+using Comman.Contracts;
+using Comman.Contracts.Events;
 
 namespace Common.Infrastructure.Kafka
 {

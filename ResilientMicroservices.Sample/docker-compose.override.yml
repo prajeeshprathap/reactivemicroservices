@@ -10,20 +10,11 @@ services:
       ADVERTISED_HOST: kafkaserver
       ADVERTISED_PORT: 9092
 
-  customerMongoDb:
+  mongodb:
     image: mongo
     restart: always
     ports:
-      - 27017:27018
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
-
-  orderMongoDb:
-    image: mongo
-    restart: always
-    ports:
-      - 27017:27019
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password

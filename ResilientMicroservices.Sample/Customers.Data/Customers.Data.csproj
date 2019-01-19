@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Command.Contracts\Command.Contracts.csproj" />
+    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
     <ProjectReference Include="..\Common.Infrastructure.MongoDb\Common.Infrastructure.MongoDb.csproj" />
   </ItemGroup>
 

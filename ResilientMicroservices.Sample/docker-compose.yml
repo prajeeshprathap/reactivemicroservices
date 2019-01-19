@@ -2,13 +2,17 @@ version: '3.4'
 
 services:
   customerservice:
-    image: ${DOCKER_REGISTRY}customersvc
+    image: customersvc
     build:
       context: .
       dockerfile: Customers.Web/Dockerfile
+    ports:
+    - 32001:80
 
   orderservice:
-    image: ${DOCKER_REGISTRY}ordersvc
+    image: ordersvc
     build:
       context: .
       dockerfile: Orders.Web/Dockerfile
+    ports:
+    - 32002:80

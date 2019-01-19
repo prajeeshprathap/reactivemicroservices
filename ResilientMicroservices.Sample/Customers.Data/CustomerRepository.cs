@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Command.Contracts;
+using Comman.Contracts;
 using Common.Infrastructure.MongoDb;
-using MongoDB.Bson;
 using MongoDB.Driver;
-using EnsureThat;
-using MongoDB.Driver.Core.Misc;
-using MongoDB.Driver.Linq;
 
 namespace ResilientMicroservices.Sample.Customers.Data
 {
@@ -20,14 +15,9 @@ namespace ResilientMicroservices.Sample.Customers.Data
         {
         }
 
-        public async Task<IEnumerable<Customer>> GetAll(CancellationToken cancellationToken)
+        public async Task<Customer> GetById(Guid id, CancellationToken cancellationToken)
         {
-            return await Customers.AsQueryable().Select(c => c).ToListAsync(cancellationToken);
-        }
-
-        public Task<Customer> GetById(Guid id, CancellationToken cancellationToken)
-        {
-            return Task.FromResult(Customers.Find(c => c.Id == id, new FindOptions { AllowPartialResults = false }).FirstOrDefault(cancellationToken));
+            return await Task.FromResult(Customers.Find(c => c.Id == id, new FindOptions { AllowPartialResults = false }).FirstOrDefault(cancellationToken));
         }
 
         public async Task New(Customer customer, CancellationToken cancellationToken)
@@ -35,9 +25,15 @@ namespace ResilientMicroservices.Sample.Customers.Data
             await Customers.InsertOneAsync(customer, new InsertOneOptions { BypassDocumentValidation = false }, cancellationToken);
         }
 
-        public async Task Delete(Guid id, CancellationToken cancellationToken)
+        public async Task UpdateCreditLimit(Guid customerId, decimal newCreditLimit, CancellationToken cancellationToken)
         {
-            await Customers.DeleteOneAsync(c => c.Id == id, cancellationToken);
+            var customer = await GetById(customerId, cancellationToken);
+            if (customer == default(Customer))
+            {
+                throw new CustomerNotFoundException($"Failed to find a customer with ID {customerId}");
+            }
+            customer.CreditLimit = newCreditLimit;
+            await Customers.ReplaceOneAsync(c => c.Id == customerId, customer, new UpdateOptions {IsUpsert = false}, cancellationToken);
         }
     }
 }

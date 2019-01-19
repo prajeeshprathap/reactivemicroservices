@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
+﻿using AutoMapper;
 using Comman.Contracts;
 using ResilientMicroservices.Sample.Customers.Domain.Commands;
 
 namespace ResilientMicroservices.Sample.Customers.Domain
 {
-    public class CommandToContractMapperProfile : Profile
+    public class ContractToCommandMapperProfile : Profile
     {
-        public CommandToContractMapperProfile()
+        public ContractToCommandMapperProfile()
         {
-            CreateMap<CreateCustomerCommand, Customer>()
+            CreateMap<Customer, CreateCustomerCommand>()
                 .ForMember(c => c.Id, options => options.MapFrom(source => source.Id))
                 .ForMember(c => c.Name, options => options.MapFrom(source => source.Name))
                 .ForMember(c => c.CreditLimit, options => options.MapFrom(source => source.CreditLimit));

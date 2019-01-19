@@ -2,9 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>ResilientMicroservices.Sample.Orders.Domain</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
+    <ProjectReference Include="..\Common.Domain\Common.Domain.csproj" />
+    <ProjectReference Include="..\Common.Infrastructure.Kafka\Common.Infrastructure.Kafka.csproj" />
     <ProjectReference Include="..\Orders.Data\Orders.Data.csproj" />
   </ItemGroup>
 

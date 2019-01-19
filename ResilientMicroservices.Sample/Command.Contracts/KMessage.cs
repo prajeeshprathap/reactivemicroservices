@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
-namespace Common.Contracts
+﻿namespace Comman.Contracts
 {
     public class KMessage
     {
