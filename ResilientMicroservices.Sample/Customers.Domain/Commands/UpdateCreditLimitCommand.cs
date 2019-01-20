@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Comman.Contracts.Events;
+using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
 using ResilientMicroservices.Sample.Customers.Data;

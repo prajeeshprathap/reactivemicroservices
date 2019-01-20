@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
-using Comman.Contracts;
+using Common.Contracts;
 using ResilientMicroservices.Sample.Customers.Domain.Commands;
 
 namespace ResilientMicroservices.Sample.Customers.Domain

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>ResilientMicroservices.Sample.Orders.Data</RootNamespace>
+    <RootNamespace>ReactiveMicroservices.Sample.Orders.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
+    <ProjectReference Include="..\Command.Contracts\Common.Contracts.csproj" />
     <ProjectReference Include="..\Common.Infrastructure.MongoDb\Common.Infrastructure.MongoDb.csproj" />
   </ItemGroup>
 

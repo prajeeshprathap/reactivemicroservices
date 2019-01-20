@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts
+namespace Common.Contracts
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class EventAttribute : Attribute

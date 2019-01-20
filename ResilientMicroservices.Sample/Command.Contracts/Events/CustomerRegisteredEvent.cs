@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Command.Contracts.Events
+namespace Common.Contracts.Events
 {
     [Event("CustomerRegistered")]
     public class CustomerRegisteredEvent : IEvent

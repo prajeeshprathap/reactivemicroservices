@@ -1,4 +1,4 @@
-﻿namespace Comman.Contracts.Events
+﻿namespace Common.Contracts.Events
 {
     public interface IEvent { }
 }

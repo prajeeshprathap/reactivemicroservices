@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Comman.Contracts.Events
+namespace Common.Contracts.Events
 {
     [Event("OrderValidated")]
     public class OrderValidatedEvent : IEvent

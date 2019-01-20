@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Comman.Contracts;
+using Common.Contracts;
 
 namespace ResilientMicroservices.Sample.Customers.Data
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts
+namespace Common.Contracts
 {
     [Serializable]
     public class Customer

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>ResilientMicroservices.Sample.Customers.Domain</RootNamespace>
+    <RootNamespace>ReactiveMicroservices.Sample.Customers.Domain</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

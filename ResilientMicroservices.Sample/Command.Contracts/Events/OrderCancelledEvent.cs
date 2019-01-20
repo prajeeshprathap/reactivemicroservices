@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts.Events
+namespace Common.Contracts.Events
 {
     [Event("OrderCancelled")]
     public class OrderCancelledEvent : IEvent

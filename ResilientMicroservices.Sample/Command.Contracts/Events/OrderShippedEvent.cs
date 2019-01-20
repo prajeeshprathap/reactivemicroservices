@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts.Events
+namespace Common.Contracts.Events
 {
     [Event("OrderShipped")]
     public class OrderShippedEvent : IEvent

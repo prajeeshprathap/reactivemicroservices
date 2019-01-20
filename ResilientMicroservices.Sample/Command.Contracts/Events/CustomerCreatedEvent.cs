@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts.Events
+namespace Common.Contracts.Events
 {
     [Event("CustomerCreated")]
     public class CustomerCreatedEvent : IEvent

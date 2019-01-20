@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Command.Contracts;
+using Common.Contracts;
 using ResilientMicroservices.Sample.Customers.Data;
 
 namespace ResilientMicroservices.Sample.Customers.Domain.Commands

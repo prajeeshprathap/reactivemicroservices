@@ -3,8 +3,8 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Comman.Contracts;
-using Comman.Contracts.Events;
+using Common.Contracts;
+using Common.Contracts.Events;
 using Common.Infrastructure.Kafka;
 using ResilientMicroservices.Sample.Customers.Data;
 

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Comman.Contracts.Events;
+using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
 using Common.Infrastructure.MongoDb;

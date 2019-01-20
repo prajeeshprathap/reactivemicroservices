@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-    <RootNamespace>ResilientMicroservices.Sample.Customers.Web</RootNamespace>
+    <RootNamespace>ReactiveMicroservices.Sample.Customers.Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
+    <ProjectReference Include="..\Command.Contracts\Common.Contracts.csproj" />
     <ProjectReference Include="..\Common.Infrastructure.Kafka\Common.Infrastructure.Kafka.csproj" />
     <ProjectReference Include="..\Customers.Domain\Customers.Domain.csproj" />
   </ItemGroup>

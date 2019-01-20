@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Comman.Contracts;
+using Common.Contracts;
 using ResilientMicroservices.Sample.Orders.Domain.Commands;
 
 namespace ResilientMicroservices.Sample.Orders.Domain

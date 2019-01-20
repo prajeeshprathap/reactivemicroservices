@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Comman.Contracts;
+using Common.Contracts;
 
 namespace Common.Infrastructure.Kafka
 {

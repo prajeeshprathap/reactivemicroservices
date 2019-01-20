@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Comman.Contracts;
+using Common.Contracts;
 using Common.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

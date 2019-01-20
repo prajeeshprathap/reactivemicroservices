@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Comman.Contracts
+namespace Common.Contracts
 {
     public class Order
     {

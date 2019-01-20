@@ -1,4 +1,4 @@
-﻿namespace Comman.Contracts
+﻿namespace Common.Contracts
 {
     public class KMessage
     {

@@ -8,8 +8,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Comman.Contracts;
-using Comman.Contracts.Events;
+using Common.Contracts;
+using Common.Contracts.Events;
 
 namespace Common.Infrastructure.Kafka
 {

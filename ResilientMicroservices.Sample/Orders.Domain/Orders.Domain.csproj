@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>ResilientMicroservices.Sample.Orders.Domain</RootNamespace>
+    <RootNamespace>ReactiveMicroservices.Sample.Orders.Domain</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Command.Contracts\Comman.Contracts.csproj" />
+    <ProjectReference Include="..\Command.Contracts\Common.Contracts.csproj" />
     <ProjectReference Include="..\Common.Domain\Common.Domain.csproj" />
     <ProjectReference Include="..\Common.Infrastructure.Kafka\Common.Infrastructure.Kafka.csproj" />
     <ProjectReference Include="..\Orders.Data\Orders.Data.csproj" />

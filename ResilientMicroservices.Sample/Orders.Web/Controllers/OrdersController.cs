@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Comman.Contracts;
+using Common.Contracts;
 using Common.Domain;
 using Microsoft.AspNetCore.Mvc;
 using ResilientMicroservices.Sample.Orders.Domain.Commands;

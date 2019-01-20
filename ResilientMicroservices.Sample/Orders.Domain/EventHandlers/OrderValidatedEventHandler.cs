@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Comman.Contracts.Events;
+using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
 using Newtonsoft.Json.Linq;
