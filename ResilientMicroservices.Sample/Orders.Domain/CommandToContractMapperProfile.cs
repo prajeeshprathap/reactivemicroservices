@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Common.Contracts;
-using ResilientMicroservices.Sample.Orders.Domain.Commands;
+using ReactiveMicroservices.Sample.Orders.Domain.Commands;
 
-namespace ResilientMicroservices.Sample.Orders.Domain
+namespace ReactiveMicroservices.Sample.Orders.Domain
 {
     public class CommandToContractMapperProfile : Profile
     {

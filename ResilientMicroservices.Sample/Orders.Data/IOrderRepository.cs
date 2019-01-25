@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Common.Contracts;
 
-namespace ResilientMicroservices.Sample.Orders.Data
+namespace ReactiveMicroservices.Sample.Orders.Data
 {
     public interface IOrderRepository
     {

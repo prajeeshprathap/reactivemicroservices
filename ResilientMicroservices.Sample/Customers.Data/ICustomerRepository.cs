@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Common.Contracts;
 
-namespace ResilientMicroservices.Sample.Customers.Data
+namespace ReactiveMicroservices.Sample.Customers.Data
 {
     public interface ICustomerRepository
     {

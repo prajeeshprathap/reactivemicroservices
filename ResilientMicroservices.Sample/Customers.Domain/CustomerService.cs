@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Common.Contracts;
-using ResilientMicroservices.Sample.Customers.Data;
+using ReactiveMicroservices.Sample.Customers.Data;
 
-namespace ResilientMicroservices.Sample.Customers.Domain
+namespace ReactiveMicroservices.Sample.Customers.Domain
 {
     public class CustomerService : ICustomerService
     {

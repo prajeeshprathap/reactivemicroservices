@@ -5,7 +5,7 @@ using Common.Contracts;
 using Common.Infrastructure.MongoDb;
 using MongoDB.Driver;
 
-namespace ResilientMicroservices.Sample.Orders.Data
+namespace ReactiveMicroservices.Sample.Orders.Data
 {
     public class OrderRepository : BaseRepository, IOrderRepository
     {

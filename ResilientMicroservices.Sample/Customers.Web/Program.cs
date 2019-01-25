@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ResilientMicroservices.Sample.Customers.Web
+namespace ReactiveMicroservices.Sample.Customers.Web
 {
     public class Program
     {

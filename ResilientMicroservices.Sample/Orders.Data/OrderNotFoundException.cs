@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ResilientMicroservices.Sample.Orders.Data
+namespace ReactiveMicroservices.Sample.Orders.Data
 {
     public class OrderNotFoundException : ArgumentException
     {

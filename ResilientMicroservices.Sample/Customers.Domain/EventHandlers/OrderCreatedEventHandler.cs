@@ -1,12 +1,11 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Common.Contracts;
 using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
 using Newtonsoft.Json.Linq;
 
-namespace ResilientMicroservices.Sample.Customers.Domain.EventHandlers
+namespace ReactiveMicroservices.Sample.Customers.Domain.EventHandlers
 {
     public class OrderCreatedEventHandler : IServiceEventHandler
     {

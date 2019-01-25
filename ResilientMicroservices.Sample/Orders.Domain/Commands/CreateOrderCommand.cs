@@ -6,9 +6,9 @@ using Common.Contracts;
 using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
-using ResilientMicroservices.Sample.Orders.Data;
+using ReactiveMicroservices.Sample.Orders.Data;
 
-namespace ResilientMicroservices.Sample.Orders.Domain.Commands
+namespace ReactiveMicroservices.Sample.Orders.Domain.Commands
 {
     public class CreateOrderCommand : ICommand
     {

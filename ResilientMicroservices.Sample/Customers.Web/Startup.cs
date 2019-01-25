@@ -11,13 +11,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using ResilientMicroservices.Sample.Customers.Data;
-using ResilientMicroservices.Sample.Customers.Domain;
-using ResilientMicroservices.Sample.Customers.Domain.Commands;
-using ResilientMicroservices.Sample.Customers.Domain.EventHandlers;
+using ReactiveMicroservices.Sample.Customers.Data;
+using ReactiveMicroservices.Sample.Customers.Domain;
+using ReactiveMicroservices.Sample.Customers.Domain.Commands;
+using ReactiveMicroservices.Sample.Customers.Domain.EventHandlers;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
-namespace ResilientMicroservices.Sample.Customers.Web
+namespace ReactiveMicroservices.Sample.Customers.Web
 {
     public class Startup
     {

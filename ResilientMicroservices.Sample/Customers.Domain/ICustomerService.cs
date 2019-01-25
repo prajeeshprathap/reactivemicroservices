@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ResilientMicroservices.Sample.Customers.Domain
+namespace ReactiveMicroservices.Sample.Customers.Domain
 {
     public interface ICustomerService
     {

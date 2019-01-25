@@ -5,7 +5,7 @@ using Common.Domain;
 using Common.Infrastructure.Kafka;
 using Newtonsoft.Json.Linq;
 
-namespace ResilientMicroservices.Sample.Orders.Domain.EventHandlers
+namespace ReactiveMicroservices.Sample.Orders.Domain.EventHandlers
 {
     public class OrderValidatedEventHandler : IServiceEventHandler
     {

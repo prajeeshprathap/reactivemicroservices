@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ResilientMicroservices.Sample.Customers.Data
+namespace ReactiveMicroservices.Sample.Customers.Data
 {
     public class CustomerNotFoundException : ArgumentException
     {

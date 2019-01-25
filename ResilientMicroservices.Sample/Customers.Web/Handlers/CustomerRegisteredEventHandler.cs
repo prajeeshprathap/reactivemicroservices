@@ -1,11 +1,11 @@
-﻿using Common.Domain;
-using Common.Infrastructure.Kafka;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Domain;
+using Common.Infrastructure.Kafka;
+using Newtonsoft.Json.Linq;
 
-namespace ResilientMicroservices.Sample.Customers.Web.Handlers
+namespace ReactiveMicroservices.Sample.Customers.Web.Handlers
 {
     public class CustomerRegisteredEventHandler : IServiceEventHandler
     {

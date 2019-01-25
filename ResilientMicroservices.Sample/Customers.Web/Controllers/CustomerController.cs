@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using Common.Contracts;
 using Common.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using ResilientMicroservices.Sample.Customers.Domain.Commands;
+using ReactiveMicroservices.Sample.Customers.Domain.Commands;
 
-namespace ResilientMicroservices.Sample.Customers.Web.Controllers
+namespace ReactiveMicroservices.Sample.Customers.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Common.Contracts.Events;
 using Common.Domain;
 using Common.Infrastructure.Kafka;
-using ResilientMicroservices.Sample.Customers.Data;
+using ReactiveMicroservices.Sample.Customers.Data;
 
-namespace ResilientMicroservices.Sample.Customers.Domain.Commands
+namespace ReactiveMicroservices.Sample.Customers.Domain.Commands
 {
     public class UpdateCreditLimitCommand : ICommand
     {
