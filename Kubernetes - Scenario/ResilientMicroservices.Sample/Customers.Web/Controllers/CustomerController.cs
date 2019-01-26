@@ -28,6 +28,15 @@ namespace ReactiveMicroservices.Sample.Customers.Web.Controllers
             _updateCreditLimitCommandHandler = updateCreditLimitCommandHandler;
         }
 
+        
+
+        [HttpGet]
+        public async Task<IActionResult> All()
+        {
+            _log.Info("Received Customer data:", customer);
+            return Ok();
+        }
+
         [HttpPost]
         [Route("[action]")]
         public async Task<IActionResult> NewCustomer([FromBody] Customer customer)
