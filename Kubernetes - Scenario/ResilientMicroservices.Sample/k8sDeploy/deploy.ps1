@@ -1,7 +1,6 @@
 $namespace = "packt"
 $dockerRegistry = "localhost:5000"
-$fluentdConfigFile= '.\k8s\efk\fluentd.conf'
-$releaseVersion = "0.0.1"
+$releaseVersion = "0.1.0"
 $ErrorActionPreference = "Stop"
 
 Write-Host "Building docker images" -ForegroundColor Yellow
@@ -33,10 +32,8 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Setup k8s requirements" -ForegroundColor Yellow
 & kubectl config set-context $(& kubectl  config current-context) --namespace=$namespace
-& kubectl create configmap fluentd-config --from-file=fluent.conf=$fluentdConfigFile -n $namespace
 
 Write-Host "Starting k8s deployment" -ForegroundColor Yellow
-& kubectl apply -f "$PSScriptRoot\k8s\efk"
 & kubectl apply -f "$PSScriptRoot\k8s"
 If ($LASTEXITCODE -ne 0) {
     throw "Failed to create deployments in k8s"
