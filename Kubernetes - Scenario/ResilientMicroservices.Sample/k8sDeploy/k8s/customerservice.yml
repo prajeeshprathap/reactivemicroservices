@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: customerservice
-        image: localhost:5000/customerservice:0.0.3
+        image: localhost:5000/customerservice:0.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 80

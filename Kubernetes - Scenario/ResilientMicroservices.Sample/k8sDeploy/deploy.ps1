@@ -1,10 +1,7 @@
 $namespace = "packt"
 $dockerRegistry = "localhost:5000"
-$dockerusername = ""
-$dockerpassword = ""
-$pullSecret = ""
 $fluentdConfigFile= '.\k8s\efk\fluentd.conf'
-$releaseVersion = "0.0.3"
+$releaseVersion = "0.0.1"
 $ErrorActionPreference = "Stop"
 
 Write-Host "Building docker images" -ForegroundColor Yellow
@@ -34,21 +31,9 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "Successfully created namespace $namespace" -ForegroundColor Green
 }
 
-# Write-Host "Setup k8s requirements" -ForegroundColor Yellow
+Write-Host "Setup k8s requirements" -ForegroundColor Yellow
 & kubectl config set-context $(& kubectl  config current-context) --namespace=$namespace
-# & kubectl create secret docker-registry $pullSecret `
-#                         --docker-server=$dockerRegistry `
-#                         --docker-username=$dockerusername `
-#                         --docker-password=$dockerpassword `
-#                         --docker-email="example@gmail.com" `
-#                         --namespace=$namespace
-# & kubectl create configmap fluentd-config --from-file=fluent.conf=$fluentdConfigFile -n $namespace
-# & kubectl get secret $pullSecret -n $namespace
-# If ($LASTEXITCODE -ne 0) {
-#     throw "$pullSecret cannot be created in namespace '$namespace'."
-# } else {
-#     Write-Host "Successfully created secret $pullSecret" -ForegroundColor Green
-# }
+& kubectl create configmap fluentd-config --from-file=fluent.conf=$fluentdConfigFile -n $namespace
 
 Write-Host "Starting k8s deployment" -ForegroundColor Yellow
 & kubectl apply -f "$PSScriptRoot\k8s\efk"
