@@ -30,8 +30,8 @@ $ErrorActionPreference = "Stop"
 #     Write-Host "Successfully created namespace $namespace" -ForegroundColor Green
 # }
 
-# Write-Host "Setup k8s requirements" -ForegroundColor Yellow
-# & kubectl config set-context $(& kubectl  config current-context) --namespace=$namespace
+Write-Host "Setup k8s requirements" -ForegroundColor Yellow
+& kubectl config set-context $(& kubectl  config current-context) --namespace=$namespace
 
 Write-Host "Starting k8s deployment" -ForegroundColor Yellow
 & kubectl apply -f "$PSScriptRoot\k8s\configuration"

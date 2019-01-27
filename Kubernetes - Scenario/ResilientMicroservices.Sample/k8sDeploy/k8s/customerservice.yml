@@ -17,6 +17,7 @@ kind: Deployment
 metadata:
   name: customerservice
 spec:
+  replicas: 3
   template:
     metadata:
       labels:
