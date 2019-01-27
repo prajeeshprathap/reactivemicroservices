@@ -31,10 +31,10 @@ namespace ReactiveMicroservices.Sample.Customers.Web.Controllers
         
 
         [HttpGet]
-        public async Task<IActionResult> All()
+        public IActionResult All()
         {
-            _log.Info("Received Customer data:", customer);
-            return Ok();
+            _log.Info("Received get data:");
+            return Ok("success");
         }
 
         [HttpPost]

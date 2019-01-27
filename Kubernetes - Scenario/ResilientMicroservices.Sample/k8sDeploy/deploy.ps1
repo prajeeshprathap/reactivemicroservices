@@ -4,7 +4,7 @@ $dockerusername = ""
 $dockerpassword = ""
 $pullSecret = ""
 $fluentdConfigFile= '.\k8s\efk\fluentd.conf'
-$releaseVersion = "0.0.2"
+$releaseVersion = "0.0.3"
 $ErrorActionPreference = "Stop"
 
 Write-Host "Building docker images" -ForegroundColor Yellow
@@ -25,14 +25,14 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "Successfully published docker images." -ForegroundColor Green
 }
 
-# Write-Host "Creating namespace in k8s" -ForegroundColor Yellow
-# & kubectl  create namespace $namespace 
-# & kubectl  get namespace $namespace
-# if ($LASTEXITCODE -ne 0) {
-#     throw "$namespace cannot be created."
-# } else {
-#     Write-Host "Successfully created namespace $namespace" -ForegroundColor Green
-# }
+Write-Host "Creating namespace in k8s" -ForegroundColor Yellow
+& kubectl  create namespace $namespace 
+& kubectl  get namespace $namespace
+if ($LASTEXITCODE -ne 0) {
+    throw "$namespace cannot be created."
+} else {
+    Write-Host "Successfully created namespace $namespace" -ForegroundColor Green
+}
 
 # Write-Host "Setup k8s requirements" -ForegroundColor Yellow
 & kubectl config set-context $(& kubectl  config current-context) --namespace=$namespace
